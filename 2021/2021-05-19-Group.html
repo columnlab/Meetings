@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>COVID-19 on Wikipedia</title>
+		<title>19 May 2021 Group Meeting</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
@@ -17,362 +17,121 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+				<!-- Each slide is its own <section>. This is the first slide. -->
 				<section>
-					<h2>A Quantitative Portrait of Wikipedia's Collaborations during the COVID-19 Pandemic</h2>
-					<p style="color:#CFB87C; font-weight:bold;">Brian Keegan</p>
-					<p style="color:#565A5C">28 April 2021</p>
+					<h3>19 May 2021 Group Meeting</h3>
+				</section>
+
+				<!-- This is the second slide. -->
+				<section>
+					<h3>Outline</h3>
+					<p>Slides can be accessed <a href="https://columnlab.github.io/Meetings/2021/2021-05-19-Group.html">here</a> (<a href="https://github.com/columnlab/Meetings/blob/main/2021/2021-05-19-Group.html">source</a>)</p>
+					<ul>
+						<li>Introducing William Egesdal!</li>
+						<li>Rose, Bud, Thorns</li>
+						<li>Brian: <a href="https://github.com/columnlab">GitHub</a> and <a href="https://pages.github.com/">GitHub Pages</a></li>
+						<li>Brian: <a href="https://revealjs.com/">Reveal.js</a></li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Summary</h2>
-					<p>Longitudinal analysis of Wikipedia's coverage of COVID-19 through 2020</p>
-					<p>Revision histories and activities reveal information production and consumption dynamics</p>
-					<p>Content of articles can be used to reconstruct hyperlink networks and measure content similarity</p>
-					<p>(Old) <a href="https://arxiv.org/abs/2006.08899" target="_blank" rel="noopener noreferrer">pre-print on arXiv</a></p>
-					<p>A multi-level portrait of many quantitative findings: help me find threads!</p>
+					<h3>Introducing William Egesdal!</h3>
+					<p><a href="https://www.linkedin.com/in/wegesdal/">William</a> is a <a href="https://catalog.colorado.edu/undergraduate/colleges-schools/engineering-applied-science/programs-study/computer-science/applied-computer-science-post-baccalaureate-bachelor-science-bsacs/">post-bacc</a> student living in Hawai'i</p>
+					<p>Working with Brian this summer on studying emoji use in the /r/WallStreetBets community</p>
+					<p>🚀🚀🚀 Welcome William! 🚀🚀🚀 </p>
 				</section>
 
 				<section>
-					<section>
-					<h2>Background</h2>
-						<p>Wikipedia's information production and consumption about current events is a rich empirical setting</p>
-						<p>The disruptions caused by the COVID-19 pandemic are encoded in Wikipedia article behavior</p>
-						<p>Wikipedia articles about COVID-19 pandemic requires different forms of collaboration and coordination than most articles about current events</p>
-					</section>
-
-					<section>
-						<h2>Background</h2>
-						<p>Limited evidence that Wikipedia is a reliable source for digital epidemiology and surveillance</p>
-						<p>High and increasing quality and trust in medical information on Wikipedia</p>
-						<p>Emerging evidence about lockdowns influencing Wikipedia editing behavior and dissemination of scientific results</p>
-					</section>
-
+					<h3>Roses, Buds, Thorns</h3>
+					<p>Quick intro for William 👋</p>
+					<p>🌹: Successes, wins, positive developments!</p>
+					<p>🌱: Promising, new ideas, potential developments</p>
+					<p>🌵: Challenges, setbacks, need support</p>
 				</section>
 
 				<section>
-					<section>
-						<h2>Methods</h2>
-						<p>Wikipedia's APIs expose historical data about article revision activity, content, and pageviews</p>
-						<p><a href="https://github.com/brianckeegan/wikifunctions" target="_blank" rel="noopener noreferrer">Custom Python scripts</a> to retrieve and analyze data</p>
-					</section>
-
-					<section>
-						<h2>Sampling</h2>
-						<p>Start with high-relevance "seed articles" about <a href="https://en.wikipedia.org/wiki/COVID-19_pandemic" target="_blank" rel="noopener noreferrer">pandemic event</a>, <a href="https://en.wikipedia.org/wiki/COVID-19" target="_blank" rel="noopener noreferrer">disease</a>, and <a href="https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2" target="_blank" rel="noopener noreferrer">virus</a></p>
-						<p><b>Category-related articles</b>: Members of <a href="https://en.wikipedia.org/wiki/Category:SARS-CoV-2" target="_blank" rel="noopener noreferrer">Category:SARS-CoV-2</a> including <a href="https://en.wikipedia.org/wiki/Category:COVID-19" target="_blank" rel="noopener noreferrer">COVID-19</a></p>
-						<p><b>Neighbor-related articles</b>: Articles ever hyperlinked from the seed articles (e.g., Donald Trump)</p>
-						<p>Retrieve revision history and pageview data for articles from December 2018 through December 2020</p>
-					</section>
-
-					<section>
-						<h2>Data</h2>
-						<p>>2.3 million revisions to >10k articles for 2018–2020</p>
-						<p>Historical content of seed articles and neighbors retrieved weekly in 2020</p>
-						<table>
-							<tr>
-								<th>Page Type</th>
-								<th>Revisions</th>
-								<th>Articles</th>
-								<th>Editors</th>
-							</tr>
-							<tr>
-								<td><i>Both</i></td>
-								<td>122,800</td>
-								<td>70</td>
-								<td>15,569</td>
-							</tr>
-							<tr>
-								<td><i>Category</i></td>
-								<td>1,789,488</td>
-								<td>9,213</td>
-								<td>213,080</td>
-							</tr>
-							<tr>
-								<td><i>Neighbor</i></td>
-								<td>394,775</td>
-								<td>1,328</td>
-								<td>85,678</td>
-							</tr>
-						</table>
-					</section>
+					<h3>GitHub and GitHub Pages</h3>
+					<p>(Yes, I can hear your groans through Zoom)</p>
 				</section>
 
 				<section>
-					<section>
-						<h2>Information production</h2>
-						<p>How did revision activity on articles vary over 2020?</p>
-						<p>Compare seed articles to both category-related and neighbor-related article sets as baselines</p>
-						<p>Number, time between, and size of revisions</p>
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>Number of revisions for seed articles and average of neighbor and category-related articles</p>
-						<img src="./imgs/daily_revisions_mean_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>Number of revisions for pandemic event seed article compared to sum of all daily revisions for neughbor and category-related articles</p>
-						<img src="./imgs/daily_revisions_sum_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>Time between revisions</p>
-						<img src="./imgs/daily_edit_lag_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>Median size of a contribution (bytes) over time</p>
-						<img src="./imgs/daily_diff_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>Number of new articles and users by day</p>
-						<img src="./imgs/daily_article_user_creations.png" height="400">
-					</section>
-
-					<section>
-						<h2>Information production</h2>
-						<p>In most acute momemnts of pandemic in February-April 2020, hundreds of daily revisions imposes significant coordination costs</p>
-						<p>Revision activity on single pandemic event article overtook revision activity across other articles</p>
-						<p>Slowing pace of revisions after May increases time between edits and enables more traditional forms of contribution and deliberation</p>
-					</section>
-
+					<h3>What is Reveal.js?</h3>
+					<p>Check out the <a href="https://revealjs.com/?demo">Demo</a></p>
+					<p>A web framework for interactive presentations</p>
+					<p>Won't replace PowerPoint for high-stakes presentations</p>
+					<p></p>
 				</section>
 
 				<section>
-					<section>
-						<h2>Info. consumption</h2>
-						<p>Pageview data captures information seeking behaviors—strongly influenced by external events!</p>
-						<img src="./imgs/daily_pageviews_seed.png" height="400">
-					</section>
-
-					<section>
-						<h2>Info. consumption</h2>
-						<p>Pageview activity for COVID small compared to category and neighbor-related information</p>
-						<img src="./imgs/daily_pageviews_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Info. consumption</h2>
-						<p>Event > Disease > Virus</p>
-						<p>Pageviews to seed articles much greater than average attention to category and neighbor-related articles</p>
-						<p>Category-related articles about political figures and elections swamp information consumption about pandemic/disease/virus, especially near major events</p>
-					</section>
+					<h3>Setting up Reveal.js with a CDN</h3>
+					<p>The Reveal.js installation documentation recommends a "local hosting" setup</p>
+					<p>A local hosting setup requires you to maintain and serve the Reveal.js files yourself</p>
+					<img class="fragment" src="https://media.giphy.com/media/yBnI9iojWdID6/giphy.gif" width="480" height="200" frameBorder="0">
 				</section>
 
 				<section>
-					<section>
-						<h2>Editing patterns</h2>
-						<p>How has user-level editing changed over time?</p>
-						<p>We can measure intensity of revision activity and identify patterns of user re-engagement</p>
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Time since last edit</p>
-						<img src="./imgs/daily_user_lag_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Time since last edit</p>
-						<img src="./imgs/editing_intensity.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Revisions by time of day</p>
-						<img src="./imgs/editing_time_of_day.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Users active at $t-n$ still active at $t$</p>
-						<img src="./imgs/daily_user_reengagement.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Editors active at $t-n$ on seed $i$ active at $t$ on seed $j$</p>
-						<img src="./imgs/daily_user_reengagement_seeds.png" height="300">
-					</section>
-
-					<section>
-						<h2>Editing patterns</h2>
-						<p>Time between user revisions has slowed</p>
-						<p>Strong bimodal pattern across time capturing within and between edit session behaviors</p>
-						<p>Strong diurnal cycle in editing patterns suggestive of over-representation of editors from particular geographies or work patterns</p>
-						<p>Consistent levels of user re-engagement over time</p>
-						<p>Tracking editor movement between articles as a prerequisite for coordination</p>
-					</section>
+					<h3>Setting up Reveal.js with a CDN</h3>
+					<p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Networks</a> (CDNs) host data like videos and software instead of your server</p>
+					<p>In addition to laziness and simplicity, this has benefits for speed, consistency, and security</p>
+					<img class="fragment" src="https://media.giphy.com/media/EDt1m8p5hqXG8/giphy.gif" width="480" height="264" frameBorder="0">
 				</section>
 
 				<section>
-					<section>
-						<h2>Editor turnover</h2>
-						<p>Segment editors into weekly editing cohorts</p>
-						<p>Group all the editors of 2019 content together</p>
-						<p>Measure the number of revisions made, unique users, and the fraction of weekly revisions from each cohort</p>
-					</section>
-
-					<section>
-						<h2>Editor turnover</h2>
-						<p>Number of revisions per cohort</p>
-						<img src="./imgs/cohort_daily_revisions.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editor turnover</h2>
-						<p>Number of users per cohort</p>
-						<img src="./imgs/cohort_daily_users.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editor turnover</h2>
-						<p>2019 editor cohort + weekly 2020 cohorts</p>
-						<p>Fraction of revisions per cohort</p>
-						<img src="./imgs/cohort_daily_editor_fraction.png" height="400">
-					</section>
-
-					<section>
-						<h2>Editor turnover</h2>
-						<p>Profoundly high levels of turnover: most new editors are gone within a week</p>
-						<p>Durability of 2019 cohort: these editors motivated to remain active contributors over long durations</p>
-						<p>Turnover + durability replicates previous findings from U.S. election and candidate articles</p>
-						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: What are 2019 editors doing that dissuades subsequent editors from remaining?</p>
-					</section>
+					<h3>Setting up Reveal.js with a CDN</h3>
+					<p>Download the Reveal.js <a href="https://github.com/hakimel/reveal.js/blob/master/index.html">example template</a></p>
+					<p>Open in Sublime and look for CSS and JS assets</p>
+					<p>Note they have a <i>relative</i> rather than <i>absolute</i> path</p>
+					<pre><code data-trim data-noescape><script type="text/template">
+						<link rel="stylesheet" href="dist/reset.css">
+						<link rel="stylesheet" href="dist/reveal.css">
+						<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+					</script></code></pre>
 				</section>
 
 				<section>
-					<section>
-						<h2>Collaboration network</h2>
-						<p>Bipartite network of editors connected to articles</p>
-						<p>Measure the number of editors and articles being revised daily</p>
-						<p>How has the connectivity of the collaboration network changed over time?</p>
-					</section>
-
-					<section>
-						<h2>Collaboration network</h2>
-						<p>Bipartite degree and weight distributions</p>
-						<img src="./imgs/cuml_collab_g_distributions.png" height="250">
-					</section>
-
-					<section>
-						<h2>Collaboration network</h2>
-						<p>Number of daily articles, editors, and revisions</p>
-						<img src="./imgs/g_snapshot_counts.png" height="400">
-					</section>
-
-					<section>
-						<h2>Collaboration network</h2>
-						<p>Average clustering coefficient around editors & articles; fraction in largest component</p>
-						<img src="./imgs/g_snapshot_clustering_lcc.png" height="400">
-					</section>
-
-					<section>
-						<h2>Collaboration network</h2>
-						<p>Collaboration activity tracks LCC fraction, peaking during start of shutdowns in March, declines to a stable baseline by June</p>
-						<p>Article clustering increases as many articles share more editors in common</p>
-						<p>Editor clustering decreases as fewer editors share articles in common</p>
-						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: How can editor clustering decline while article clustering increases?</p>
-					</section>
+					<h3>Setting up Reveal.js with a CDN</h3>
+					<p>Replace these relative paths with links to CDN assets</p>
+					<p><a href="https://cdnjs.com/">CDNJS</a> is popular CDN for hosting JavaScript libraries</p>
+					<p>Find the <a href="https://cdnjs.com/libraries/reveal.js/4.1.0">Reveal.js 4.1.0 library</a> on CDNJS</p>
+					<p>Replace the relative <code>href</code> paths with the CDN paths for each CSS and JS asset:</p>
+					<pre><code data-trim data-noescape><script type="text/template">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+					</script></code></pre>
 				</section>
 
 				<section>
-					<section>
-						<h2>Hyperlink network</h2>
-						<p>Directed network of articles linking to articles</p>
-						<p>Sampled weekly and hyperlinks parsed from body of articles</p>
-						<p>How has the connectivity of articles changed over time?</p>
-					</section>
-
-					<section>
-						<h2>Hyperlink network</h2>
-						<p>Nodes sized by degree, colored by creation, edges colored by creation</p>
-						<img src="./imgs/hyperlink_g.png" height="400">
-					</section>
-
-					<section>
-						<h2>Hyperlink network</h2>
-						<p>Seed articles compared to average across all articles</p>
-						<img src="./imgs/hyperlink_weekly_seed_changes.png" height="400">
-					</section>
-
-					<section>
-						<h2>Hyperlink network</h2>
-						<p>Seed articles are extremely "important" from March</p>
-						<p>Clustering and neighbor in-degree decrease sharply after March as hyperlink network grows with more poorly-connected articles</p>
-						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: Hyperlink networks stable by June → what is being so actively edited afterwards?</p>
-					</section>
+					<h3>Setting up Reveal.js with a CDN</h3>
+					<p>Inspect the entire example template file and replace <i>all</i> the CSS and JS assets with CDN links</p>
+					<p><code>.min.</code> means <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minified</a> → condensed code</p>
+					<p><code>reveal.css</code> and <code>reveal.js</code> are different files!</p>
+					<img class="fragment" src="https://media.giphy.com/media/xGdvlOVSWaDvi/giphy.gif" width="360" height="270" frameBorder="0">
 				</section>
 
 				<section>
-					<section>
-						<h2>Content evolution</h2>
-						<p>How has the seed articles' content changed over time?</p>
-						<p>Measure the cosine similarity of each article's weekly version compared to a late-2020 version</p>
-						<p><b>Text</b>: similarity of main body words</p>
-						<p><b>Images</b>: similarity of images</p>
-						<p><b>Hyperlinks</b>: similarity of hyperlinks</p>
-						<p><b>External links</b>: similarity of (mostly) citations</p>
-					</section>
-
-					<section>
-						<h2>Content evolution</h2>
-						<p>Article size as a coarse measure of content</p>
-						<img src="./imgs/daily_size_all.png" height="400">
-					</section>
-
-					<section>
-						<h2>Content evolution</h2>
-						<p>Three seed articles, four metrics, Jan.–Dec. 2020</p>
-						<img src="./imgs/weekly_seed_content_changes.png">
-					</section>
-
-					<section>
-						<h2>Content evolution</h2>
-						<p>Rapid growth in size of articles surpassing mean article size in sample within weeks</p>
-						<p>Virus > Disease > Event similarity</p>
-						<p>Text & external similarity by April vs. Image & hyperlink similarity after November</p>
-						<p style="padding: 25px; border: 5px solid #565A5C;"><b>Tension</b>: Revision activity vs. content stability → what is being so actively edited?</p>
-					</section>
+					<h3>Editing a Reveal.js presentation</h3>
+					<p>Follow the <a href="https://revealjs.com/markup/">documentation</a></p>
+					<p>Each slide is a <code>section</code></p>
+					<pre><code data-trim data-noescape><script type="text/template">
+					<div class="reveal">
+						<div class="slides">
+							<!-- Two slides -->
+							<section>Slide 1</section>
+							<section>Slide 2</section>
+						</div>
+					</div>
+					</script></code></pre>
 				</section>
-				
+
 				<section>
-					<section>
-						<h2>Discussion</h2>
-						<p>Wikipedia is an active site of knowledge production and consumption around the COVID-19 pandemic, but in unexpected ways → activity does not clearly track waves of infections/deaths</p>
-						<p>Editing strongly influenced by persistent editors rather than users-of-the-week</p>
-						<p>Content similarity suggests what has stabilized vs. what remains actively-edited</p>
-					</section>
-
-					<section>
-						<h2>Limitations</h2>
-						<p>English Wikipedia behavior only: largest and most active, but not representative of dynamics specific to other language editions and information needs</p>
-						<p>Over-emphasis on behavior of seed articles when pandemic shocks were dispersed</p>
-						<p>Page protection is a profound confounder for editing</p>
-						<p>No analysis of discussion, administrative, infrastructural, and off-wiki activity</p>
-					</section>
-
-					<section>
-						<h2>Future work</h2>
-						<p>Characterizing pandemic information seeking and updating in response to specific shocks</p>
-						<p>Using participation in COVID collaborations as a discontinuity on editor behavior</p>
-						<p>Understanding responses to efforts to introduce disinformation, racism, etc. and lessons for generalizing to other platforms</p>
-					</section>
-
-					<section>
-						<h2>Additional plug</h2>
-						<p>I will be teaching "INFO 4613/5613: Network Science" in Fall 2021</p>
-						<p>Focus on applying network science constructs to real-word social and information networks</p>
-						<p>Currently over-subscribed, but remote-synchronous class will allow us to scale enrollments</p>
-					</section>
-
+					<h3>Editing a Reveal.js presentation</h3>
+					<p>You can use just about any HTML within a section</p>
+					<pre><code data-trim data-noescape><script type="text/template">
+						<h1>Big header</h1>
+						<p style="font-weight:bold;">Custom text styles</p>
+						<img src="http://gph.is/17AUbQQ">
+					</script></code></pre>
 				</section>
 
 			</div>
