@@ -13,6 +13,11 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
 
+		<!-- Loading Vega-->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -37,8 +42,8 @@
 				<section>
 					<h3>Introducing William Egesdal!</h3>
 					<p><a href="https://www.linkedin.com/in/wegesdal/">William</a> is a <a href="https://catalog.colorado.edu/undergraduate/colleges-schools/engineering-applied-science/programs-study/computer-science/applied-computer-science-post-baccalaureate-bachelor-science-bsacs/">post-bacc</a> student living in Hawai'i</p>
-					<p>Working with Brian this summer on studying emoji use in the /r/WallStreetBets community</p>
-					<p>🚀🚀🚀 Welcome William! 🚀🚀🚀 </p>
+					<p>Working with Brian this summer on studying emoji use in the <a href="https://www.reddit.com/r/wallstreetbets/">/r/WallStreetBets</a> community</p>
+					<p>🚀🚀🚀 Welcome William! 🚀🚀🚀</p>
 				</section>
 
 				<section>
@@ -50,88 +55,289 @@
 				</section>
 
 				<section>
-					<h3>GitHub and GitHub Pages</h3>
-					<p>(Yes, I can hear your groans through Zoom)</p>
+					<h3>What's the deal?</h3>
+					<p>This is a Reveal.js deck hosted on a GitHub Page</p>
+					<p>What's Reveal.js? 📜</p>
+					<p>What's GitHub Pages? 🌐</p>
+					<p>What's GitHub? 📁</p>
+					<p>Let's go in reverse!</p>
 				</section>
 
 				<section>
-					<h3>What is Reveal.js?</h3>
-					<p>Check out the <a href="https://revealjs.com/?demo">Demo</a></p>
-					<p>A web framework for interactive presentations</p>
-					<p>Won't replace PowerPoint for high-stakes presentations</p>
-					<p></p>
+					<section>
+						<h3>GitHub 📁</h3>
+						<p class="fragment">(Yes, I can hear your 🙄😒🤢 through Zoom)</p>
+						<p class="fragment">GitHub is an important platform for open science and collaboration</p>
+						<p class="fragment">We shouldn't use it for everything, but we shouldn't be scared of it either!</p>
+						<p class="fragment">Host simple-to-moderately complex websites using GitHub Pages!</p>
+				</section>
+
+					<section>
+						<h3>GitHub Basics</h3>
+						<p><a href="https://en.wikipedia.org/wiki/Git">Git</a> is a version control system for tracking changes</p>
+						<p>GitHub is a social coding platform using Git but also supporting collaborations</p>
+					</section>
+
+					<section>
+						<h3>GitHub Vocab</h3>
+						<p>A repository ("repo") is project-level collection of files</p>
+						<p>Users "push" and "pull" changes to the project</p>
+						<p>Copy ("fork") any repo to make your own changes</p>
+						<p>Collisions may require merging or reverting</p>
+						<p>Individual accounts + organizations + projects</p>
+					</section>
+
+					<section>
+						<h3>GitHub Account</h3>
+						<p>If you haven't already, create a GitHub account!</p>
+						<p>(This will likely follow you the rest of your career!)</p>
+						<p>Your account hosts its own repos</p>
+						<p>Also documents your contributions over time</p>
+						<p>An important part of technical recruiting!</p>
+					</section>
+
+					<section>
+						<h3>GitHub Organizations</h3>
+						<p>Shared accounts that can host their own repos</p>
+						<p>COLUMN's GitHub org is <a href="https://github.com/columnlab">here</a></p>
+						<p>I invited who I could find, but send me your account if you haven't created one yet so I can add you</p>
+						<p>Arcadia is already hosting her dissertation code!</p>
+					</section>
+
+					<section>
+						<h3>GitHub Desktop</h3>
+						<p>Most tutorials use GitHub from the command line</p>
+						<p>I still use easy-mode GUI: <a href="https://desktop.github.com/">GitHub Desktop</a></p>
+						<p>Click the green "Code" button in upper-left of any repo to "clone" the code to your computer</p>
+						<p>Many things can also be done from the web GUI</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h3>Setting up Reveal.js with a CDN</h3>
-					<p>The Reveal.js installation documentation recommends a "local hosting" setup</p>
-					<p>A local hosting setup requires you to maintain and serve the Reveal.js files yourself</p>
-					<img class="fragment" src="https://media.giphy.com/media/yBnI9iojWdID6/giphy.gif" width="480" height="200" frameBorder="0">
+					<section>
+						<h3>GitHub Pages 🌐</h3>
+						<p>You can also use GitHub to host websites! (<a href="https://docs.github.com/en/pages/getting-started-with-github-pages">Docs</a>)</p>
+						<p>HTML/CSS/JS are frustrating but important skills to develop or keep sharp!</p>
+						<p>Consider this as an inexpensive option for hosting your own personal website and portfolio</p>
+						<p>We could also do interesting things with our lab web presence!</p>
+					</section>
+
+					<section>
+						<h3>Accessing GitHub Page</h3>
+						<p>In the Settings for a repo, go to "Pages", and select the "main" branch under "Source"</p>
+						<p>Then you should be able to access the website at <code>accountname.github.io/reponame/</code></p>
+						<p>Create a repository called <code>accountname.github.io</code> to host a website</p>
+					</section>
+
+					<section>
+						<h3>Basic Web Design</h3>
+						<p>You'll need a <code>index.html</code> as a landing page</p>
+						<p>Otherwise link directly into the HTML file</p>
+						<p>There's not much at <code>https://columnlab.github.io/Meetings/</code></p>
+						<p>This presentation is an HTML file located at <code>https://columnlab.github.io/Meetings/2021/2021-05-19-Group.html</code></p>
+					</section>
+
+					<section>
+						<h3>Workflow</h3>
+						<p>Make the repo and enable the "Pages" option</p>
+						<p>Clone the repo to your local machine</p>
+						<p>Make/open an HTML file inside the repo directory</p>
+						<p>Save your HTML file, use GitHub Desktop to "commit to main", and then "push" to origin</p>
+						<p>Go to your account/org github.io page to see it!</p>
+						<p>It may take a minute or so for your changes to update on the page</p>
+					</section>
+
+					<section>
+						<h3>Examples</h3>
+						<p>My bad personal GitHub Page is: <code><a href="https://brianckeegan.github.io/">https://brianckeegan.github.io/</a></code></p>
+						<p>I host some better GitHub Pages for my classes with nice Reveal.js decks on the "cuinfoscience" organization: <code><a href="https://cuinfoscience.github.io/INFO3402-Spring2021/">https://cuinfoscience.github.io/INFO3402-Spring2021/</code></p>
+					</section>
+
+					<section>
+						<h3>Jekyll</h3>
+						<p>You can make really slick websites using <a href="https://jekyllrb.com/">Jekyll</a> (<a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll">docs</a>)</p>
+						<p>Think of <a href="https://jekyllrb.com/docs/themes/">Jekyll Themes</a> like WordPress themes!</p>
+						<p>Some non-trivial configuration and setup needed 🤔</p>
+						<p>I haven't ascended to this level, but would like to someday!</p>
+					</section>
+
 				</section>
 
 				<section>
-					<h3>Setting up Reveal.js with a CDN</h3>
-					<p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Networks</a> (CDNs) host data like videos and software instead of your server</p>
-					<p>In addition to laziness and simplicity, this has benefits for speed, consistency, and security</p>
-					<img class="fragment" src="https://media.giphy.com/media/EDt1m8p5hqXG8/giphy.gif" width="480" height="264" frameBorder="0">
-				</section>
+					<section>
+						<h3>Reveal.js 📜</h3>
+						<p>Check out the <a href="https://revealjs.com/?demo">Demo</a></p>
+						<p>A web framework for interactive presentations</p>
+						<p>Won't replace PowerPoint for high-stakes presentations</p>
+						<p>But slick and lightweight way to share presentations!</p>
+					</section>
 
-				<section>
-					<h3>Setting up Reveal.js with a CDN</h3>
-					<p>Download the Reveal.js <a href="https://github.com/hakimel/reveal.js/blob/master/index.html">example template</a></p>
-					<p>Open in Sublime and look for CSS and JS assets</p>
-					<p>Note they have a <i>relative</i> rather than <i>absolute</i> path</p>
-					<pre><code data-trim data-noescape><script type="text/template">
-						<link rel="stylesheet" href="dist/reset.css">
-						<link rel="stylesheet" href="dist/reveal.css">
-						<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-					</script></code></pre>
-				</section>
+					<section>
+						<h3>Setting up Reveal.js with a CDN</h3>
+						<p>The Reveal.js installation documentation recommends a "local hosting" setup</p>
+						<p>A local hosting setup requires you to maintain and serve the Reveal.js files yourself</p>
+						<img class="fragment" src="https://media.giphy.com/media/yBnI9iojWdID6/giphy.gif" width="480" height="200" frameBorder="0">
+					</section>
 
-				<section>
-					<h3>Setting up Reveal.js with a CDN</h3>
-					<p>Replace these relative paths with links to CDN assets</p>
-					<p><a href="https://cdnjs.com/">CDNJS</a> is popular CDN for hosting JavaScript libraries</p>
-					<p>Find the <a href="https://cdnjs.com/libraries/reveal.js/4.1.0">Reveal.js 4.1.0 library</a> on CDNJS</p>
-					<p>Replace the relative <code>href</code> paths with the CDN paths for each CSS and JS asset:</p>
-					<pre><code data-trim data-noescape><script type="text/template">
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
-						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
-					</script></code></pre>
-				</section>
+					<section>
+						<h3>Setting up Reveal.js with a CDN</h3>
+						<p><a href="https://en.wikipedia.org/wiki/Content_delivery_network">Content Delivery Networks</a> (CDNs) host data like videos and software instead of your server</p>
+						<p>In addition to laziness and simplicity, this has benefits for speed, consistency, and security</p>
+						<img class="fragment" src="https://media.giphy.com/media/EDt1m8p5hqXG8/giphy.gif" width="480" height="264" frameBorder="0">
+					</section>
 
-				<section>
-					<h3>Setting up Reveal.js with a CDN</h3>
-					<p>Inspect the entire example template file and replace <i>all</i> the CSS and JS assets with CDN links</p>
-					<p><code>.min.</code> means <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minified</a> → condensed code</p>
-					<p><code>reveal.css</code> and <code>reveal.js</code> are different files!</p>
-					<img class="fragment" src="https://media.giphy.com/media/xGdvlOVSWaDvi/giphy.gif" width="360" height="270" frameBorder="0">
-				</section>
+					<section>
+						<h3>Setting up Reveal.js with a CDN</h3>
+						<p>Download the Reveal.js <a href="https://github.com/hakimel/reveal.js/blob/master/index.html">example template</a></p>
+						<p>Open in Sublime and look for CSS and JS assets</p>
+						<p>Note they have a <i>relative</i> rather than <i>absolute</i> path</p>
+						<pre><code data-trim data-noescape><script type="text/template">
+							<link rel="stylesheet" href="dist/reset.css">
+							<link rel="stylesheet" href="dist/reveal.css">
+							<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+						</script></code></pre>
+					</section>
 
-				<section>
-					<h3>Editing a Reveal.js presentation</h3>
-					<p>Follow the <a href="https://revealjs.com/markup/">documentation</a></p>
-					<p>Each slide is a <code>section</code></p>
-					<pre><code data-trim data-noescape><script type="text/template">
-					<div class="reveal">
-						<div class="slides">
-							<!-- Two slides -->
-							<section>Slide 1</section>
-							<section>Slide 2</section>
+					<section>
+						<h3>Setting up Reveal.js with a CDN</h3>
+						<p>Replace these relative paths with links to CDN assets</p>
+						<p><a href="https://cdnjs.com/">CDNJS</a> is popular CDN for hosting JavaScript libraries</p>
+						<p>Find the <a href="https://cdnjs.com/libraries/reveal.js/4.1.0">Reveal.js 4.1.0 library</a> on CDNJS</p>
+						<p>Replace the relative <code>href</code> paths with the CDN paths for each CSS and JS asset:</p>
+						<pre><code data-trim data-noescape><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Setting up Reveal.js with a CDN</h3>
+						<p>Inspect the entire example template file and replace <i>all</i> the CSS and JS assets with CDN links</p>
+						<p><code>.min.</code> means <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minified</a> → condensed code</p>
+						<p><code>reveal.css</code> and <code>reveal.js</code> are different files!</p>
+						<img class="fragment" src="https://media.giphy.com/media/xGdvlOVSWaDvi/giphy.gif" width="360" height="270" frameBorder="0">
+					</section>
+
+					<section>
+						<h3>Editing a Reveal.js presentation</h3>
+						<p>Follow the <a href="https://revealjs.com/markup/">documentation</a></p>
+						<p>Each slide is a <code>section</code></p>
+						<pre><code data-trim data-noescape><script type="text/template">
+						<div class="reveal">
+							<div class="slides">
+								<!-- Two slides -->
+								<section>Slide 1</section>
+								<section>Slide 2</section>
+							</div>
 						</div>
-					</div>
-					</script></code></pre>
+						</script></code></pre>
+					</section>
+
 				</section>
 
 				<section>
-					<h3>Editing a Reveal.js presentation</h3>
-					<p>You can use just about any HTML within a section</p>
-					<pre><code data-trim data-noescape><script type="text/template">
-						<h1>Big header</h1>
-						<p style="font-weight:bold;">Custom text styles</p>
-						<img src="http://gph.is/17AUbQQ">
-					</script></code></pre>
+					<section>
+						<h3>Cool Reveal.js tricks!</h3>
+					</section>
+
+					<section>
+						<h3>Animated code blocks!</h3>
+						<pre><code data-trim class="html" data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<pre><code data-trim class="python" data-line-numbers=1,5|2-4|2|3|4>
+								def addition(a,b):
+						           sum = a + b
+					            return sum
+							</code></pre>
+						</script></pre></code>
+					</section>
+
+					<section>
+						<h3>Syntax highlighting!</h3>
+						<p>What does this look like?</p>
+						<pre><code class="python" data-trim data-line-numbers=1|2|3>
+						def addition(a,b):
+						  sum = a + b
+						  return sum
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Vertical slides!</h3>
+						<pre><code class="html" data-trim data-line-numbers=1,4|2|3><script type="text/template">
+							<section>
+								<section>Vertical Slide 1</section>
+								<section>Vertical Slide 2</section>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Themes!</h3>
+						<p>Reveal.js comes with 11 themes by default</p>
+						<p>These default themes are defined in standalone CSS files we get from the CDN</p>
+						<p>Swap out the default "black" theme file</p>
+						<pre><code class="html" data-trim><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+						</script></code></pre>
+						<p>for another on <a href="https://revealjs.com/themes/">the list</a> like "moon"</p> 
+						<pre><code class="html" data-trim><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Speaker Notes!</h3>
+						<p>Add a <code>data-notes</code> attribute within a <code>section</code> tag</p>
+						
+						<pre><code class="html" data-trim data-line-numbers=|1><script type="text/template">
+							<section data-notes="Shhh, these are your private notes 📝">
+							  <h2>Some Slide</h2>
+							</section>
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Math!</h3>
+						<p>Write fancy equations to impress people!</p>
+						\[
+						\tiny{
+							\text{similarity} = \cos(\theta) = {\mathbf{A} \cdot \mathbf{B} \over \|\mathbf{A}\| \|\mathbf{B}\|} = \frac{ \sum\limits_{i=1}^{n}{A_i  B_i} }{ \sqrt{\sum\limits_{i=1}^{n}{A_i^2}}  \sqrt{\sum\limits_{i=1}^{n}{B_i^2}} }
+						}
+						\]
+						<p>(This LaTeX/MathJax syntax can be found on Wikipedia)</p>
+					</section>
+
+					<section>
+						<h3>Visualizations!</h3>
+						<p>Embed dynamic visualizations using <a href="https://vega.github.io/">Vega</a> or <a href="altair-viz.github.io/">Altair</a>!</p>
+						<div id="vis-point2"></div>
+						<!-- From above -->
+						<script type="text/javascript">
+						var spec = {
+							"width": 400,
+							"height": 300,
+							"data": {
+								"url": "https://vega.github.io/vega-datasets/data/sp500-2000.csv"
+							},
+							"mark": "line",
+							"encoding": {
+								"x": {
+									"field": "date",
+									"type": "temporal",
+								},
+								"y": {
+									"field": "close",
+									"type": "quantitative"
+								}
+							}
+						};
+						var opt = {"renderer": "canvas", "actions": false};
+						vegaEmbed("#vis-point2", spec, opt);
+						</script>
+					</section>
+
 				</section>
 
 			</div>
